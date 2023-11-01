@@ -1,8 +1,7 @@
-package Iterator.service;
+package Bvn.service;
 
-import Iterator.entites.Student;
+import Bvn.entites.Student;
 
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 
@@ -26,20 +25,16 @@ public class StudentService {
 
     }
     public void getStudentById(Map<Integer,Student> studentMap, Scanner scan) {
-        boolean loop = true;
-        while (loop) {
             System.out.println("Nhap id hs can tim: ");
             int inputId = Integer.parseInt(scan.nextLine());
-            if(studentMap.get(inputId)==null) {
+            if(!studentMap.containsKey(inputId)) {
                 System.out.println("k co hs id nay");
             }
             else {
                 System.out.println(studentMap.get(inputId));
-            loop = false;
             }
         }
 
-    }
 
     public void getAverageScore(Map<Integer,Student> studentMap) {
         int count=studentMap.size();

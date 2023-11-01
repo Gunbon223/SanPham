@@ -1,10 +1,9 @@
-package Iterator;
+package Bvn;
 
-import Iterator.entites.Student;
-import Iterator.service.StudentService;
+import Bvn.entites.Student;
+import Bvn.service.StudentService;
 
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.Map;
 import java.util.Scanner;
 

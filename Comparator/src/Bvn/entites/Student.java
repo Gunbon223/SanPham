@@ -1,4 +1,4 @@
-package Iterator.entites;
+package Bvn.entites;
 
 public class Student {
     private int id;
