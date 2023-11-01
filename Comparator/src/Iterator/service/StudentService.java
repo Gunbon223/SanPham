@@ -26,12 +26,19 @@ public class StudentService {
 
     }
     public void getStudentById(Map<Integer,Student> studentMap, Scanner scan) {
-        System.out.println("Nhap id hs can tim: ");
-        int inputId = Integer.parseInt(scan.nextLine());
-        if(studentMap.get(inputId)==null) {
-            System.out.println("k co hs id nay");
+        boolean loop = true;
+        while (loop) {
+            System.out.println("Nhap id hs can tim: ");
+            int inputId = Integer.parseInt(scan.nextLine());
+            if(studentMap.get(inputId)==null) {
+                System.out.println("k co hs id nay");
+            }
+            else {
+                System.out.println(studentMap.get(inputId));
+            loop = false;
+            }
         }
-        else System.out.println(studentMap.get(inputId));
+
     }
 
     public void getAverageScore(Map<Integer,Student> studentMap) {

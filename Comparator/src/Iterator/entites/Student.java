@@ -2,7 +2,7 @@ package Iterator.entites;
 
 public class Student {
     private int id;
-    private static int autoId = 1;
+    private static int autoId = 0;
     private String name;
     private int score;
 
