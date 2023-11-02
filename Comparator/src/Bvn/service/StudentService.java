@@ -26,7 +26,13 @@ public class StudentService {
         }
 
     }
-    public void getStudentById(Map<Integer,Student> studentMap, Scanner scan) {
+
+    public void removeStudent(int id,Map<Integer,Student> studentMap) {
+        if (studentMap.containskey(id)) {
+            studentMap.remove(id);
+    }
+    
+    public void getStudentByIdAndDelete(Map<Integer,Student> studentMap, Scanner scan) {
         while (true) {
             System.out.println("Nhap id hs can tim: ");
             int inputId = Integer.parseInt(scan.nextLine());
@@ -38,6 +44,10 @@ public class StudentService {
                 }
             } else {
                 System.out.println(studentMap.get(inputId));
+                System.out.println("Ban co muon xoa hs nay ? y/n" );
+                if(utility.inputString(scan).equalsIgnoreCase("y")) {
+                    removeStudent(inputMap,studentMap);
+                }
                 break;
             }
         }
